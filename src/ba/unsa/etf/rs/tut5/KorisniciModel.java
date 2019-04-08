@@ -31,4 +31,9 @@ public class KorisniciModel {
     public void setTrenutniKorisnik(Korisnik trenutniKorisnik) {
         this.trenutniKorisnik.set(trenutniKorisnik);
     }
+    public void napuni(){
+        korisnici.add(new Korisnik("Šemsudin","Dino Poplava","semso@etf.usa.ba","poplava","nemampojma"));
+        korisnici.add(new Korisnik("Edin","Dino Poplava","edin@etf.usa.ba","poplava","nemampojma"));
+        korisnici.add(new Korisnik("Semin","Dino Poplava","semin@etf.usa.ba","poplava","nemampojma"));
+    }
 }
