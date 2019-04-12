@@ -26,7 +26,7 @@
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <ListView GridPane.rowSpan="5">
+      <ListView fx:id="listKorisnika" GridPane.halignment="CENTER" GridPane.rowSpan="5" GridPane.valignment="CENTER">
          <GridPane.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </GridPane.margin>
@@ -39,19 +39,35 @@
       <Label text="E-Mail" GridPane.columnIndex="1" GridPane.rowIndex="2" />
       <Label text="Korisničko ime" GridPane.columnIndex="1" GridPane.rowIndex="3" />
       <Label text="Lozinka" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-      <PasswordField GridPane.columnIndex="2" GridPane.rowIndex="4" />
-      <TextField GridPane.columnIndex="2" GridPane.rowIndex="3" />
-      <TextField GridPane.columnIndex="2" GridPane.rowIndex="2" />
-      <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
-      <TextField GridPane.columnIndex="2" />
+      <TextField fx:id="imePolje" GridPane.columnIndex="2">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin></TextField>
+
+      <TextField fx:id="prezimePolje" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin></TextField>
+      <TextField fx:id="mailPolje" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin></TextField>
+      <TextField fx:id="usernamePolje" GridPane.columnIndex="2" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin></TextField>
+      <PasswordField fx:id="passPolje" GridPane.columnIndex="2" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin></PasswordField>
       <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="5">
         <buttons>
-          <Button mnemonicParsing="false" text="Button">
+          <Button fx:id="btndodaj" mnemonicParsing="false" onAction="#dodaj" text="Dodaj">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
             </Button>
-            <Button mnemonicParsing="false" text="Button">
+            <Button fx:id="btnkraj" mnemonicParsing="false" onAction="#kraj" text="Kraj">
                <padding>
                   <Insets bottom="5.0" right="5.0" top="5.0" />
                </padding>

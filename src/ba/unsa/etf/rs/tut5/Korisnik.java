@@ -3,9 +3,10 @@ package ba.unsa.etf.rs.tut5;
 import javafx.beans.property.SimpleStringProperty;
 
 public class Korisnik {
-    private SimpleStringProperty ime,prezime,email,username,password;
+    private SimpleStringProperty ime=new SimpleStringProperty(),prezime=new SimpleStringProperty(),email=new SimpleStringProperty(),username=new SimpleStringProperty(),password=new SimpleStringProperty();
 
     public Korisnik(String ime, String prezime, String email, String username, String password) {
+
         this.ime.set(ime);
         this.prezime.set(prezime);
         this.email.set(email);
@@ -75,6 +76,6 @@ public class Korisnik {
 
     @Override
     public String toString() {
-        return ime+" "+prezime;
+        return ime.get()+" "+prezime.get();
     }
 }
